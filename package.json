@@ -1,0 +1,22 @@
+{
+  "name": "habit-tracker",
+  "version": "1.0.0",
+  "description": "A full-stack habit tracking application with web interface, API, and AI engine",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "ai-engine"
+  ],
+  "scripts": {
+    "install": "npm install --legacy-peer-deps",
+    "build": "npm run build --workspace=apps/web",
+    "build:api": "npm run build --workspace=apps/api",
+    "build:web": "npm run build --workspace=apps/web",
+    "dev": "npm run dev --workspace=apps/web",
+    "dev:api": "npm run dev --workspace=apps/api",
+    "start": "npm run start --workspace=apps/web",
+    "test": "npm test --workspace=apps/ai-engine"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
